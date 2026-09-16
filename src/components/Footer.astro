@@ -1,0 +1,111 @@
+---
+import Logo from "../components/Logo.astro";
+import IG from "../assets/ig.svg";
+import FB from "../assets/FB.svg";
+---
+
+<footer>
+  <section class="footer-content">
+    <article class="column-1">
+      <div class="logo-container">
+        <Logo />
+      </div>
+      <p>Instant Ugen er en hyldest til instant-fotografering, og foregår to gange årligt: I påsken og efteråret.</p>
+    </article>
+    <article class="column-2">
+      <nav>
+        <ul>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/deltag">Del dine instant fotos</a></li>
+          <li><a href="/nominerede">Vindere og nominerede</a></li>
+          <li><a href="/praktisk">Praktisk info</a></li>
+        </ul>
+      </nav>
+    </article>
+    <article class="column-3">
+      <div class="adress">
+        <p>Guldbergsgade 29N</p>
+        <p>2200 København N</p>
+      </div>
+      <div class="contact">
+        <p>+45 64872938</p>
+        <p>kontakt@instantugen.dk</p>
+        <div class="socials">
+          <IG />
+          <FB />
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="copyright">
+    <p>© 2026 All rights reserved</p>
+  </section>
+</footer>
+<style>
+  footer {
+    background-color: var(--footer-color);
+    padding: 6vw;
+  }
+
+  .logo-container :global(svg) {
+    max-width: 350px;
+    height: auto;
+    position: relative;
+    z-index: 100;
+  }
+
+  .logo-container :global(.footer-color) {
+    fill: rgb(255, 255, 255);
+  }
+
+  p,
+  a {
+    color: var(--text-color-light);
+  }
+
+  li {
+    font-family: var(--font-family-inter);
+    font-size: var(--p-size);
+    line-height: 2;
+  }
+
+  section,
+  article {
+    margin-top: 3rem;
+  }
+
+  .contact,
+  .socials {
+    margin-top: 1.5rem;
+  }
+
+  .socials {
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  @media screen and (width > 1000px) {
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .column-2 {
+      place-items: center;
+    }
+
+    .column-2,
+    .column-3 {
+      margin-left: 4vw;
+    }
+
+    .copyright {
+      place-self: center;
+    }
+
+    footer {
+      padding-bottom: 1rem;
+    }
+  }
+</style>
