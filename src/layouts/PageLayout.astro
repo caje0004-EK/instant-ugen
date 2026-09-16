@@ -1,0 +1,25 @@
+---
+import "../styles/custom.css";
+import "../styles/general.css";
+import Header from "../components/Header.astro";
+const { heading } = Astro.props;
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="generator" content="" />
+    <meta name="description" content="Instant ugen" />
+    <title>{heading}</title>
+  </head>
+</html>
+<body>
+    <Header/>
+  <main>
+    <slot />
+  </main>
+</body>
