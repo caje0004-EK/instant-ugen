@@ -1,9 +1,9 @@
 <nav>
   <ul class="menu">
     <div class="menu-content">
-      <li><a>Del dine instants</a></li>
+      <li><a href="/deltag">Del dine instants</a></li>
       <li><a href="/nominerede">Vindere & nominerede</a></li>
-      <li><a>Praktisk info</a></li>
+      <li><a href="/praktisk">Praktisk info</a></li>
     </div>
   </ul>
   <button class="burger">
@@ -11,6 +11,7 @@
     <span class="line"></span>
     <span class="line"></span>
   </button>
+  <div class="blur"></div>
 </nav>
 
 <style>
@@ -21,6 +22,7 @@
     display: block;
     background-color: transparent;
     border: 0;
+    position: relative;
     z-index: 100;
   }
   .burger .line {
@@ -36,6 +38,9 @@
     display: none;
   }
 
+  .burger.active .line {
+    background-color: rgb(255, 255, 255);
+  }
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
     transition: 0.2s linear;
@@ -52,12 +57,23 @@
     display: block;
     position: absolute;
     top: 100px;
-    left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     z-index: 50;
     background-color: var(--header-active-color);
     padding: 0 3rem;
+    top: 0;
+    padding-top: 80px;
+    transition:
+      opacity 0.4s,
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @starting-style {
+    nav.active .menu {
+      opacity: 0;
+      transform: translateX(30px);
+    }
   }
 
   .menu-content {
@@ -69,6 +85,51 @@
 
   :global(body.no-scroll) {
     overflow: hidden;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li a {
+    display: inline-block;
+  }
+
+  li a::after {
+    content: "→";
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s ease;
+    margin-left: 1ch;
+    width: 20px;
+    transform: scaleX(1.9);
+  }
+
+  li a:hover::after {
+    opacity: 1;
+  }
+
+  @media screen and (width > 800px) {
+    nav.active .menu {
+      width: 60%;
+      right: 0;
+    }
+
+    nav.active .blur {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      left: 0;
+      top: 0;
+      z-index: 40;
+    }
+  }
+
+  @media screen and (width <= 800px) {
+    nav.active .menu {
+      left: 0;
+    }
   }
 </style>
 
