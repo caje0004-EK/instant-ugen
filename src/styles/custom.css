@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   /* colors */
   --footer-color: rgb(0, 0, 0);
@@ -11,14 +13,14 @@
   --cta-color-nonfilled: rgb(0, 0, 0);
 
   /* textsizes */
-  --h1-size: clamp(34px, 5vw, 60px);
-  --h2-size: clamp(20px, 5vw, 40px);
-  --p-size: clamp(12px, 2vw, 24px);
+  --h1-size: clamp(54px, 5vw, 120px);
+  --h2-size: clamp(36px, 5vw, 70px);
+  --p-size: clamp(18px, 2vw, 24px);
   --cta-text-size: clamp(16px, 2vw, 20px);
 
   /* textstyles */
-  --font-family-anton: ;
-  --font-family-inter: ;
+  --font-family-anton: "Anton", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
   --font-weight-light: 400;
   --font-weight-normal: 500;
   --font-weight-medium: 600;
