@@ -6,6 +6,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -28,29 +29,41 @@ main {
 
 /* textstyles */
 
-/* h1 {
-  font-family: var(--font-family-beatrice);
+h1 {
+  font-family: var(--font-family-anton);
   font-size: var(--h1-size);
-  color: var(--text-color-dark);
+  color: var(--title-color);
   font-weight: var(--font-weight-light);
   font-style: var(--font-style-normal);
-} */
+  line-height: 1;
+  margin-bottom: 1ch;
+}
 
-/* h2 {
-  font-family: var(--font-family-beatrice);
+h2 {
+  font-family: var(--font-family-anton);
   font-size: var(--h2-size);
-  color: var(--text-color-dark);
+  color: var(--title-color);
   font-weight: var(--font-weight-light);
-} */
+  line-height: 1;
+  margin-bottom: 0.8ch;
+}
 
-/* p {
-  font-family: var(--font-family-montserrat);
+p {
+  font-family: var(--font-family-inter);
   font-size: var(--p-size);
   color: var(--text-color-dark);
   font-weight: var(--font-weight-light);
-} */
+  line-height: 1.5;
+}
+
+nav li {
+  list-style-type: none;
+  font-family: var(--font-family-anton);
+  font-size: var(--h2-size);
+  color: var(--text-color-light);
+}
 
 .title-split {
   display: block;
-  padding-left: 2ch;
+  padding-left: 1.5ch;
 }
