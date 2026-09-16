@@ -1,6 +1,7 @@
 :root {
   /* colors */
   --footer-color: rgb(0, 0, 0);
+  --header-active-color: rgb(230, 119, 23);
 
   --title-color: rgb(230, 119, 23);
   --text-color-dark: rgb(0, 0, 0);

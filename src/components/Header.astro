@@ -1,20 +1,34 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../assets/Logo.svg"
-import Navigation from "../components/Navigation.astro"
+import Logo from "../components/Logo.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <header>
-    <section class="header">
-    <Logo />
-    <Navigation/>
-    </section>
+  <section class="header">
+    <div class="logo-container">
+      <a href="/">
+        <Logo />
+      </a>
+    </div>
+    <Navigation />
+  </section>
 </header>
 
 <style>
-    .header{
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
+    padding: 1.5rem 2rem;
+  }
+
+  .logo-container :global(svg) {
+    max-width: 150px;
+    height: auto;
+  }
+
+  header:has(nav.active) {
+    background-color: var(--header-active-color);
+  }
 </style>
