@@ -1,0 +1,66 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import NomineredeCard from "../components/NomineredeCard.astro";
+import { Image } from "astro:assets";
+import Vinder2025 from "../assets/fotos/vinder2025.svg";
+import AmagerFaelled from "../assets/fotos/01-amager-faelled-instaxsquare01.jpg";
+import AmagerForbraending from "../assets/fotos/02-amager-forbraending-instaxsquare-01.jpg";
+import AmagerStrand from "../assets/fotos/03-amager-strand.jpg";
+import BurgerKing from "../assets/fotos/04-burger-king.jpg";
+import DobbeltOrestad from "../assets/fotos/05-dobbelt-exp-orestad.jpg";
+import LoserupStrand from "../assets/fotos/06-loserup-strand-04.jpg";
+import OrestadSortHvid from "../assets/fotos/07-orestad-sort-hvid.jpg";
+import KarlstrupKalkgrav from "../assets/fotos/08-karlstrup_kalkgrav_kaffe_08-2025.jpg";
+import AmagerStrandNat from "../assets/fotos/09-amager-strand-nat.jpg";
+import AmagerStrandVandbad from "../assets/fotos/10-amager-strand-vandbad.jpg";
+import InstaxMikro1 from "../assets/fotos/11-instax-mikro-1.jpg";
+import InstaxMikro2 from "../assets/fotos/12-instax-mikro-2.jpg";
+import AmerikaPlads from "../assets/fotos/13-amerikaplads_nordhavnen_expired_film_aug_25.jpg.jpg";
+import LoserupStrandOl from "../assets/fotos/14-loserup-strand-oel-3.jpg";
+import UkendtMotiv from "../assets/fotos/15-ukendt-motiv-pripps-blaa.jpg";
+import VejlandsAlle from "../assets/fotos/16-vejlands-alle-panorama-2.jpg";
+---
+
+<PageLayout heading="Vindere & Nominerede">
+  <section class="grid_1-1">
+    <article>
+      <h1>Vindere & <span class="title-split">nominerede</span></h1>
+      <p>Instant Ugen var noget af en succes med over 784 bidrag. Så det var ikke nemt at finde en vinder. Efter et par lange, men spændende dage, blev dommerne enige om vinderen og de 16 nominerede.</p>
+    </article>
+    <article>
+      <Image src={Vinder2025} alt="Amager Fælled" />
+    </article>
+  </section>
+  <section>
+    <h1>Nominerede</h1>
+    <article class="gallery">
+      <NomineredeCard img={AmagerFaelled} imgText="Amager Fælled" title="Amager Fælled" name="Stefan Strage" />
+      <NomineredeCard img={AmagerForbraending} imgText="Amager Forbrænding" title="Amager Forbrænding" name="Stefan Strage" />
+      <NomineredeCard img={DobbeltOrestad} imgText="2x Ørestad" title="2x Ørestad" name="Stefan Strage" />
+      <NomineredeCard img={AmagerStrand} imgText="Amager Strand" title="Amager Strand" name="Stefan Strage" />
+      <NomineredeCard img={BurgerKing} imgText="Burger King" title="Hænderne væk fra mit happy meal!" name="Stefan Strage" />
+      <NomineredeCard img={LoserupStrand} imgText="Løserup Strand" title="Løserup Strand" name="Stefan Strage" />
+      <NomineredeCard img={OrestadSortHvid} imgText="Ørestad Sort/Hvid" title="Noget nyt og noget gammelt" name="Stefan Strage" />
+      <NomineredeCard img={KarlstrupKalkgrav} imgText="Karlstrup Kalkgrav" title="Karlstrup & Kaffe" name="Stefan Strage" />
+      <NomineredeCard img={AmagerStrandNat} imgText="Amager Strand Nat" title="Amager Strand om Natten" name="Stefan Strage" />
+      <NomineredeCard img={AmagerStrandVandbad} imgText="Amager Strand Vandbad" title="Stranden" name="Stefan Strage" />
+      <NomineredeCard img={InstaxMikro1} imgText="Instax Mikro 1" title="Brændte mandler 1" name="Stefan Strage" />
+      <NomineredeCard img={InstaxMikro2} imgText="Instax Mikro 2" title="Brændte mandler 2" name="Stefan Strage" />
+      <NomineredeCard img={AmerikaPlads} imgText="Amerika Plads" title="Nordhavn om natten" name="Stefan Strage" />
+      <NomineredeCard img={LoserupStrandOl} imgText="Løserup Strand Øl" title="Strandbajer" name="Stefan Strage" />
+      <NomineredeCard img={UkendtMotiv} imgText="Ukendt Motiv" title="Abstrakt Øl" name="Stefan Strage" />
+      <NomineredeCard img={VejlandsAlle} imgText="Vejlands Allé" title="Vejlands Allé" name="Stefan Strage" />
+    </article>
+  </section>
+</PageLayout>
+<style>
+  /* grids */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 5rem;
+  }
+
+  @media screen and (width > 800px) {
+  }
+</style>
