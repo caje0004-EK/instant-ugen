@@ -23,44 +23,93 @@ import VejlandsAlle from "../assets/fotos/16-vejlands-alle-panorama-2.jpg";
 
 <PageLayout heading="Vindere & Nominerede">
   <section class="grid_1-1">
-    <article>
+    <article class="winner-content">
       <h1>Vindere & <span class="title-split">nominerede</span></h1>
       <p>Instant Ugen var noget af en succes med over 784 bidrag. Så det var ikke nemt at finde en vinder. Efter et par lange, men spændende dage, blev dommerne enige om vinderen og de 16 nominerede.</p>
     </article>
-    <article>
+    <article class="winner-img">
       <Image src={Vinder2025} alt="Amager Fælled" />
     </article>
   </section>
   <section>
     <h1>Nominerede</h1>
     <article class="gallery">
-      <NomineredeCard img={AmagerFaelled} imgText="Amager Fælled" title="Amager Fælled" name="Stefan Strage" />
-      <NomineredeCard img={AmagerForbraending} imgText="Amager Forbrænding" title="Amager Forbrænding" name="Stefan Strage" />
-      <NomineredeCard img={DobbeltOrestad} imgText="2x Ørestad" title="2x Ørestad" name="Stefan Strage" />
-      <NomineredeCard img={AmagerStrand} imgText="Amager Strand" title="Amager Strand" name="Stefan Strage" />
-      <NomineredeCard img={BurgerKing} imgText="Burger King" title="Hænderne væk fra mit happy meal!" name="Stefan Strage" />
-      <NomineredeCard img={LoserupStrand} imgText="Løserup Strand" title="Løserup Strand" name="Stefan Strage" />
-      <NomineredeCard img={OrestadSortHvid} imgText="Ørestad Sort/Hvid" title="Noget nyt og noget gammelt" name="Stefan Strage" />
-      <NomineredeCard img={KarlstrupKalkgrav} imgText="Karlstrup Kalkgrav" title="Karlstrup & Kaffe" name="Stefan Strage" />
-      <NomineredeCard img={AmagerStrandNat} imgText="Amager Strand Nat" title="Amager Strand om Natten" name="Stefan Strage" />
-      <NomineredeCard img={AmagerStrandVandbad} imgText="Amager Strand Vandbad" title="Stranden" name="Stefan Strage" />
-      <NomineredeCard img={InstaxMikro1} imgText="Instax Mikro 1" title="Brændte mandler 1" name="Stefan Strage" />
-      <NomineredeCard img={InstaxMikro2} imgText="Instax Mikro 2" title="Brændte mandler 2" name="Stefan Strage" />
-      <NomineredeCard img={AmerikaPlads} imgText="Amerika Plads" title="Nordhavn om natten" name="Stefan Strage" />
-      <NomineredeCard img={LoserupStrandOl} imgText="Løserup Strand Øl" title="Strandbajer" name="Stefan Strage" />
-      <NomineredeCard img={UkendtMotiv} imgText="Ukendt Motiv" title="Abstrakt Øl" name="Stefan Strage" />
-      <NomineredeCard img={VejlandsAlle} imgText="Vejlands Allé" title="Vejlands Allé" name="Stefan Strage" />
+      <div class="gallery-container">
+        <NomineredeCard img={AmagerFaelled} imgText="Amager Fælled" title="Amager Fælled" name="Stefan Strage" />
+        <NomineredeCard img={AmagerForbraending} imgText="Amager Forbrænding" title="Amager Forbrænding" name="Stefan Strage" />
+        <NomineredeCard img={DobbeltOrestad} imgText="2x Ørestad" title="2x Ørestad" name="Stefan Strage" />
+        <NomineredeCard img={AmagerStrand} imgText="Amager Strand" title="Amager Strand" name="Stefan Strage" />
+        <NomineredeCard img={BurgerKing} imgText="Burger King" title="Hænderne væk fra mit happy meal!" name="Stefan Strage" wide />
+        <NomineredeCard img={LoserupStrand} imgText="Løserup Strand" title="Løserup Strand" name="Stefan Strage" />
+        <NomineredeCard img={OrestadSortHvid} imgText="Ørestad Sort/Hvid" title="Noget nyt og noget gammelt" name="Stefan Strage" />
+        <NomineredeCard img={KarlstrupKalkgrav} imgText="Karlstrup Kalkgrav" title="Karlstrup & Kaffe" name="Stefan Strage" />
+        <NomineredeCard img={AmagerStrandNat} imgText="Amager Strand Nat" title="Amager Strand om Natten" name="Stefan Strage" />
+        <NomineredeCard img={AmagerStrandVandbad} imgText="Amager Strand Vandbad" title="Stranden" name="Stefan Strage" />
+        <NomineredeCard img={InstaxMikro1} imgText="Instax Mikro 1" title="Brændte mandler 1" name="Stefan Strage" />
+        <NomineredeCard img={InstaxMikro2} imgText="Instax Mikro 2" title="Brændte mandler 2" name="Stefan Strage" />
+        <NomineredeCard img={AmerikaPlads} imgText="Amerika Plads" title="Nordhavn om natten" name="Stefan Strage" />
+        <NomineredeCard img={LoserupStrandOl} imgText="Løserup Strand Øl" title="Strandbajer" name="Stefan Strage" />
+        <NomineredeCard img={UkendtMotiv} imgText="Ukendt Motiv" title="Abstrakt Øl" name="Stefan Strage" />
+        <NomineredeCard img={VejlandsAlle} imgText="Vejlands Allé" title="Vejlands Allé" name="Stefan Strage" wide />
+      </div>
     </article>
   </section>
 </PageLayout>
 <style>
-  /* grids */
-  .gallery {
+  .grid_1-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 5rem;
+    margin: 4rem 0;
+  }
+
+  .winner-img :global(img) {
+    min-width: 120%;
+  }
+
+  .gallery {
+    position: relative;
+    background-color: #b8814f;
+    border-radius: var(--border-radius);
+    margin-bottom: 4rem;
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 8rem;
+    column-gap: 4rem;
+    padding: 5rem;
+    padding-bottom: 8rem;
+    justify-content: center;
+  }
+
+  .gallery::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.125' numOctaves='2' stitchTiles='stitch' result='noise'/%3E%3CfeColorMatrix in='noise' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 30 -13'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
   }
 
   @media screen and (width > 800px) {
+    .grid_1-1 {
+      grid-template-columns: 3fr 2fr;
+      gap: 2rem;
+    }
+
+    .winner-img :global(img) {
+      min-width: 140%;
+    }
+
+    .winner-img {
+      position: relative;
+      top: -100px;
+    }
+
+    .winner-content {
+      margin-top: 5ch;
+    }
   }
 </style>

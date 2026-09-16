@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-const { img, imgText, name, title } = Astro.props;
+const { img, imgText, name, title, wide = false } = Astro.props;
 ---
 
-<div class="card">
+<div class:list={["card", { wide }]}>
   <Image src={img} alt={imgText} />
   <div class="post-it">
     <p class="title">{title}</p>
@@ -14,7 +14,10 @@ const { img, imgText, name, title } = Astro.props;
 <style>
   .card {
     position: relative;
+    z-index: 1;
+    place-self: center;
   }
+
   .post-it {
     background-color: rgb(245, 211, 205);
     width: 140px;
@@ -24,11 +27,34 @@ const { img, imgText, name, title } = Astro.props;
     transform: rotate(-3.5deg);
     box-shadow: var(--dropshadow);
     position: absolute;
-    bottom: -20px;
+    bottom: -70px;
     left: -20px;
   }
 
   .title {
     font-weight: bold;
+    margin-bottom: 0.5ch;
+  }
+
+  .card img {
+    width: auto;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  p {
+    font-size: clamp(18px, 2vw, 20px);
+  }
+
+  @media screen and (width > 800px) {
+    .card.wide {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (width < 800px) {
+    .card.wide .post-it {
+      bottom: -25px;
+    }
   }
 </style>
