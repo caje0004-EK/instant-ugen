@@ -1,0 +1,180 @@
+---
+import dommerIcon from "../assets/fotos/dommer-icon.svg";
+---
+
+<section class="all-box">
+<section class="about">
+    <div class="about-content">
+<h1>Hvem er vi?</h1>
+<p>Instant Ugen er et lille projekt, der drives af et par undervisere fra Multimediedesignuddannelsen på EK - Erhvervsakademi København.</p>
+<p class="pdel2">
+ Instant Ugen er et halvårligt projekt, hvor undervisere og studerende samarbejder om et digitalt design- og kommunikationsprojekt relateret til Instant Ugen-konkurrencen (denne hjemmeside). I bund og grund ønsker vi bare at promovere instant fotografering og have det sjovt, mens vi gør det:-)
+</p>
+</div>
+</section>
+
+<section class="dommerne">
+<div class="dommerne-content">
+    <h1>Dommerne</h1>
+    <p>Bidrag vil blive gennemgået af:</p>
+
+    <div class="judge">
+  <img src={dommerIcon.src} alt="Dommer icon" />
+  <div>
+    <strong>Jonas Hasle</strong>
+    <p>Adjunkt,<br />Multimediedesign på EK</p>
+  </div>
+  </div>
+
+  <div class="judge">
+ <img src={dommerIcon.src} alt="Dommer icon" />
+  <div>
+    <strong>Anders Dollerup</strong>
+    <p>Lektor,<br />Multimediedesign på EK</p>
+  </div>
+  </div>
+
+    
+  <div class="judge">
+  <img src={dommerIcon.src} alt="Dommer icon" />
+  <div>
+    <strong>Birgitte Heide</strong>
+    <p>Lektor,<br />Multimediedesign på EK</p>
+  </div>
+  </div>
+
+  <div class="judge">
+  <img src={dommerIcon.src} alt="Dommer icon" />
+  <div>
+    <strong>Stefan Grage</strong>
+    <p>Lektor,<br />Multimediedesign på EK</p>
+  </div>
+  </div>
+
+
+  <div class="judge">
+  <img src={dommerIcon.src} alt="Dommer icon" />
+  <div>
+    <strong>Studerende på Digital Design</strong>
+    <p>Valgfaget på Multimediedesign<br />på EK</p>
+  </div>
+  </div>
+</div>
+</section>
+
+<section class="sponsorer">
+<div class="sponsorer-content">
+ <h1>sponsorer</h1>
+ <p>Instant Ugen er ikke relateret til nogen virksomheder inden for Instant foto-branchen. Den eneste organisation, der støtter os, er EK - Erhvervsakademi København. I hvert fald indtil videre ;-)</p>
+</div>
+</section>
+</section>
+
+<style>
+
+.about{
+    padding: 50px 0px
+}
+.pdel2{
+    padding-top: 12px;
+}
+
+.dommerne{
+    background-color:rgb(230, 119, 23);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+
+
+.dommerne h1, .dommerne p{
+    color: rgb(255, 255, 255); 
+}
+
+.dommerne p{
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.judge{
+    display: flex;
+}
+
+.judge img{
+    height: 50px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.sponsorer{
+     background-color:rgb(230, 119, 23);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 50px 0px;
+}
+
+.sponsorer h1, .sponsorer p{
+ color: rgb(255, 255, 255);
+}
+
+@media (min-width: 800px){
+.all-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+     align-items: stretch;
+     padding: 90px 0px;
+}
+
+.about h1{
+    font-size: 80px;
+}
+
+
+.about p{
+    font-size: 19px;
+}
+
+.about {
+     padding: 0px;
+     grid-column: 1;
+     grid-row: 1;
+ }
+    
+.dommerne {
+     grid-column: 2;
+     grid-row: 1 / span 2;
+}
+
+.sponsorer {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.sponsorer p{
+    font-size: 19px;
+}
+
+.dommerne{
+    font-size: 20px;
+}
+
+.dommerne p{
+    font-size: 20px;
+}
+.judge img{
+    height: 60px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+
+}
+
+</style>
