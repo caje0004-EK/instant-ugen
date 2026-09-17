@@ -92,9 +92,12 @@ import betingelserImg from "../assets/fotos/betingelser-img.png";
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
-        padding: 50px 13px;
+        padding: 50px 20px;
         box-sizing: border-box;
         font-family: "Inter", sans-serif;
+        background: white;
+        border-radius: 15px;
+          margin: 0px auto 50px;
     }
 
     .box {
@@ -213,21 +216,40 @@ import betingelserImg from "../assets/fotos/betingelser-img.png";
     .checkbox a {
         color: #f47721;
     }
+button {
+    background: #f47721;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 11px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
+    margin-left: auto;
+}
+
+button:hover {
+    background: #e86612;
+}
     
 
-
- /* DESKTOP */
-
 @media (min-width: 800px) {
+
+    .form {
+        width: 120%;
+        margin: 100px auto 100px;
+    }
 
     .terms {
         display: grid;
         grid-template-columns: 120px 1fr;
         column-gap: 0px;
         align-items: center;
-
-        
     }
 
     .terms img {

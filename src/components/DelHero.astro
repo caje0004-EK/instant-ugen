@@ -59,39 +59,39 @@ import heroImg from "../assets/fotos/hero-img.png";
         margin: 0 auto;
     }
 
- @media (min-width: 800px) {
+@media (min-width: 800px) {
     .hero {
         min-height: 500px;
-        padding: 90px 0 70px 65px;
-        position: relative;
+        padding: 10px 0 20px 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
     }
 
     .hero-content {
-        width: 55%;
+        width: 100%;
     }
 
     .hero-content h1 {
-        font-size: 95px;
+        font-size: 80px;
     }
 
     .hero-content p {
-        font-size: 26px;
-        max-width: 600px;
-         
+        font-size: 24px;
+        max-width: 500px;
     }
 
     .hero-image {
-        position: absolute;
-        width: 500px;
-        right: -30px;
-        transform: translateY(-50%);
-        padding-top: 100px;
-
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .hero-image img {
         display: block;
         width: 100%;
+        max-width: 450px;
         height: auto;
     }
 }

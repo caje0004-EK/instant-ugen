@@ -90,20 +90,25 @@ const { number, title, text, image } = Astro.props;
 
 
 
-    @media (min-width: 800px) {
+   @media (min-width: 800px) {
 
-        .step {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .step-image {
-            order: 1;
-        }
-
-        .step-content {
-            order: 2;
-        }
-
+    .step {
+        display: flex;
+        width: 100%;
+        align-items: center;
     }
+
+    .step-image {
+        width: 70%;
+        margin: 10px;
+    }
+
+    .step-content {
+        width: 100%;
+    }
+
+    .step-image img {
+        width: 180px;
+    }
+}
 </style>
