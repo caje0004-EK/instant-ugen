@@ -1,0 +1,98 @@
+---
+import heroImg from "../assets/fotos/hero-img.png";
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Del dine instants</h1>
+        <p>Klar til at dele dit instant foto? Se hvordan du deltager her!</p>
+    </div>
+    <div class="hero-image">
+      <img src={heroImg.src} alt="Instant kamera" />
+    </div>
+</section>
+
+<style>
+.hero {
+        position: relative;
+        min-height: 600px;
+        padding: 45px 7px 0;
+        overflow: hidden;
+        
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        margin: 0;
+        color: #f47721;
+        font-size: 58px;
+        line-height: 0.95;
+         font-family: "Anton", sans-serif;
+         font-weight: 800;
+         font-style: normal;
+    }
+
+    .hero p {
+        margin: 12px 0 0;
+        max-width: 350px;
+        font-size: 22px;
+        line-height: 1.4;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 375px;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+ @media (min-width: 800px) {
+    .hero {
+        min-height: 500px;
+        padding: 90px 0 70px 65px;
+        position: relative;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .hero-content h1 {
+        font-size: 95px;
+    }
+
+    .hero-content p {
+        font-size: 26px;
+        max-width: 600px;
+         
+    }
+
+    .hero-image {
+        position: absolute;
+        width: 500px;
+        right: -30px;
+        transform: translateY(-50%);
+        padding-top: 100px;
+
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
