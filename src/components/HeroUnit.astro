@@ -1,0 +1,76 @@
+---
+import HeroImg from "../assets/hero-img.svg";
+import CtaMain from "./Cta-main.astro";
+---
+
+<section class="hero">
+  <article class="hero-left">
+    <div class="logo-container">
+      <HeroImg />
+    </div>
+    <p>Oplev glæden af et analog kamera, <span class="title-split"> og hjælp os med at holde instant-fotografering i live.</span></p>
+  </article>
+  <article class="hero-right">
+    <div class="date">
+      <p>12.-18.</p>
+      <p>oktober 2026</p>
+    </div>
+    <div class="share">
+      <p>Del dine instant-fotos med os</p>
+      <CtaMain href="/deltag" text="Del dine instants" />
+    </div>
+  </article>
+</section>
+
+<style>
+  .logo-container :global(svg) {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  p {
+    font-family: var(--font-family-anton);
+    font-size: clamp(19px, 2vw, 32px);
+  }
+
+  .date p {
+    font-size: var(--h2-size);
+    color: var(--title-color);
+    line-height: 1;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (width <= 1000px) {
+    .hero {
+      flex-direction: column;
+      gap: 10vw;
+    }
+  }
+
+  @media screen and (width >1000px) {
+    .hero-right {
+      place-content: center;
+      min-width: 50ch;
+    }
+
+    .hero {
+      position: relative;
+      top: -60px;
+    }
+
+    .logo-container :global(svg) {
+      left: -50px;
+    }
+  }
+</style>
