@@ -1,0 +1,273 @@
+---
+import uploadImg from "../assets/fotos/upload-img.png";
+import betingelserImg from "../assets/fotos/betingelser-img.png";
+---
+
+<form class="form">
+<div class="box name-box">
+    <label>Navn</label>
+    <div class="navnbox">
+        <input type="text"
+        name="fornavn"
+        placeholder="FULDENAVN"
+        required/>
+
+    </div>
+</div>
+
+<div class="box email-box">
+    <label for="email">E-mail</label>
+    <div class="emailbox">
+    <input type="email"
+    id="email"
+    name="email"
+    placeholder="DIN@EMIAL.DK"
+    required/>
+    </div>
+</div>
+
+<div class="box upload-box">
+    <label>Upload billede</label>
+
+    <div class="uploadbox">
+       <img src={uploadImg.src} alt="" />
+        <strong>Upload et billede</strong>
+        <span>Drag and drop files here</span>
+    </div>
+</div>
+
+<div class="box title-box">
+        <label for="title">Titel på dit instant</label>
+        
+        <div class="titlebox">
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="GIV DIT INSTANT EN TITEL"
+            required
+        />
+        </div>
+    </div>
+
+    <div class="box description-box">
+        <label for="description">Beskrivelse</label>
+
+        <div class="textbox">
+        <textarea
+            id="description"
+            name="description"
+            placeholder="FORTÆL HISTORIEN BAG DIT INSTANT..."
+            required
+        ></textarea>
+        </div>
+    </div>
+
+    <div class="terms">
+         <img src={betingelserImg.src} alt="" />
+        <h3>Vilkårene og betingelserne</h3>
+        <label class="checkbox">
+            <input
+                type="checkbox"
+                required
+            />
+            <span>
+                Jeg har læst og accepterer
+                <a href="vilkaar">
+                    vilkårene og betingelserne
+                </a>
+            </span>
+        </label>
+    </div>
+
+    <button type="submit">
+        <span>Indsend</span>
+        <span>→</span>
+    </button>
+
+</form>
+
+<style>
+    .form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        background: white;
+        border-radius: 15px;
+          margin: 0px auto 50px;
+    }
+
+    .box {
+        margin-bottom: 35px;
+    }
+
+    .box > label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .navnbox {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 7px;
+        background: #d9d9d9;
+        padding: 11px 10px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #aaa;
+        opacity: 1;
+    }
+
+    .emailbox,
+    .titlebox {
+        width: 100%;
+    }
+
+    .uploadbox {
+        width: 100%;
+        height: 144px;
+        background: #d9d9d9;
+        border-radius: 7px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .uploadbox img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .uploadbox strong {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .uploadbox span {
+        font-size: 14px;
+        color: #999;
+    }
+
+    .textbox textarea {
+        height: 260px;
+        resize: none;
+    }
+
+    .terms {
+        background: #d9d9d9;
+        border-radius: 7px;
+        padding: 25px 13px 30px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    .terms img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        margin: 0 auto 10px;
+    }
+
+    .terms h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .checkbox input {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        margin: 1px 0 0;
+        accent-color: #f47721;
+    }
+
+    .checkbox a {
+        color: #f47721;
+    }
+button {
+    background: #f47721;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 11px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-left: auto;
+}
+
+button:hover {
+    background: #e86612;
+}
+    
+
+@media (min-width: 800px) {
+
+    .form {
+        width: 120%;
+        margin: 100px auto 100px;
+    }
+
+    .terms {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        column-gap: 0px;
+        align-items: center;
+    }
+
+    .terms img {
+        width: 80px;
+        height: 80px;
+        margin: 0;
+        grid-row: 1 / 3;
+    }
+
+    .terms h3 {
+        margin: 0 0 8px;
+        text-align: left;
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .checkbox {
+        margin: 0;
+    }
+}
+</style>
