@@ -1,0 +1,184 @@
+---
+import Uge42Star from "../assets/fotos/Uge42Star.png";
+import Polaroid from "../assets/fotos/Poloaroid.png";
+---
+
+
+<section class="info-page">
+    <div class="info-top">
+        <div class="info-content">
+            <h1>Hvad er<br />Instant Ugen?</h1>
+            <p>
+                Kort fortalt er Instant Ugen en hyldest til
+                instant-fotografering. En opfordring til at
+                udforske instant-fotografiets glæder.
+            </p>
+            <p>
+                Instant Ugen foregår to gange årligt:
+                I påsken og efteråret. Så find dit Polaroid-,
+                Instax- eller hvilket som helst andet
+                instant-kamera frem, og vis os dine instants.
+            </p>
+        </div>
+        <div class="week-star">
+            <img src={Uge42Star.src} alt="Uge 42 2026" />
+        </div>
+    </div>
+
+
+    <div class="info-bottom">
+        <div class="info-image">
+            <img src={Polaroid.src} alt="Instant kamera og fotos" />
+        </div>
+        <div class="info-text">
+            <p>
+                Instant Ugen er ikke rigtig en fotokonkurrence,
+                det er mere en hyldest til god gammeldags
+                analog instant-fotografering - alle, der
+                deltager, er vindere :-)
+            </p>
+            <p>
+                Men: Vi har en flot præmie til én heldig
+                instant-fotograf!
+            </p>
+        </div>
+    </div>
+</section>
+
+ <style>
+
+.info-page {
+    width: 100%;
+    padding: 50px 0px 100px 0px;
+}
+
+.info-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.info-content {
+    grid-column: 1;
+}
+
+.info-content h1 {
+    margin: 0 0 30px;
+    color: #f47721;
+    font-family: "Anton", sans-serif;
+    font-size: 80px;
+    line-height: 0.9;
+}
+
+.info-content p {
+    margin: 0 0 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+
+.week-star {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.week-star img {
+    display: block;
+    width: 490px;
+    height: auto;
+}
+
+
+.info-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.info-image {
+    grid-column: 1;
+    margin-left: -8vw;
+}
+
+.info-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 15px 15px 0;
+}
+
+.info-text {
+    grid-column: 2;
+}
+
+.info-text p {
+    margin: 0 0 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 799px) {
+
+    .info-top {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+
+    .info-content {
+        width: 100%;
+    }
+
+    .info-content h1 {
+        font-size: 58px;
+        margin-bottom: 25px;
+    }
+
+    .info-content p {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+
+    .week-star {
+        width: 100%;
+        order: 2;
+    }
+
+    .week-star img {
+        width: 280px;
+    }
+
+
+    .info-bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+
+    .info-image {
+        display: none;
+    }
+
+
+    .info-text {
+        width: 100%;
+    }
+
+    .info-text p {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+}
+</style>
